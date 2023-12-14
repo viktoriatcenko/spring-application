@@ -29,9 +29,10 @@ public class TV {
     private final Channel channel1;
     private final Channel channel2;
 
+    // <constructor-arg ref="newsChannel"/>
     @Autowired
     public TV(@Qualifier("newsChannel") Channel channel1,
-              @Qualifier("newsChannel") Channel channel2) {
+              @Qualifier("MTVChannel") Channel channel2) {
         this.channel1 = channel1;
         this.channel2 = channel2;
     }
