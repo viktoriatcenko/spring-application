@@ -7,42 +7,7 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <context:property-placeholder location="classpath:radioPlayer.properties"/>
-
-    <bean id="catId"
-          class="ru.maxima.Cat">
-        <constructor-arg value="Pushok Papa Rimskiy"/>
-    </bean>
-
-    <bean id="maximum"
-          class="ru.maxima.radio.RadioMaximum">
-        <constructor-arg value="Nirvana - Smells like teen spirits"/>
-    </bean>
-
-    <bean id="energy"
-          class="ru.maxima.radio.RadioEnergy">
-        <constructor-arg value="Bruno Mars - Uptown Funk"/>
-    </bean>
-
-    <bean id="radioPlayer"
-          class="ru.maxima.radio.RadioPlayer"
-          scope="prototype"
-          init-method="init"
-          destroy-method="destroy">
-        <property name="music" ref="energy"/>
-        <property name="nameOfPlayer" value="${radioPlayer.nameOfPlayer}"/>
-        <property name="volume" value="${radioPlayer.volume}"/>
-    </bean>
-
-    <bean id="mtv" class="ru.maxima.tv.MTVChannel">
-    </bean>
-
-    <bean id="news" class="ru.maxima.tv.NewsChannel">
-    </bean>
-
-    <bean id="TV" class="ru.maxima.tv.TV">
-        <constructor-arg ref="mtv"/>
-    </bean>
+    <context:component-scan base-package="ru.maxima"/>
 
 
 </beans>
