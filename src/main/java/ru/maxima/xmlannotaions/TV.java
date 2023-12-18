@@ -2,7 +2,12 @@ package ru.maxima.xmlannotaions;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
+
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
 
 interface Channel {
     void playProgram();
@@ -25,9 +30,16 @@ class NewsChannel implements Channel {
 }
 
 @Component
+@Scope(value = "prototype")
 public class TV {
     private final Channel channel1;
     private final Channel channel2;
+
+    @Value("${mark}")
+    private String name;
+
+    @Value("${countOfChannels}")
+    private int countOfChannels;
 
     // <constructor-arg ref="newsChannel"/>
     @Autowired
@@ -37,6 +49,24 @@ public class TV {
         this.channel2 = channel2;
     }
 
+    @PostConstruct
+    public void init() {
+        System.out.println("initialization...");
+    }
+
+    @PreDestroy
+    public void destroy() {
+        System.out.println("destroy...");
+    }
+
+
+    public String getName() {
+        return name;
+    }
+
+    public int getCountOfChannels() {
+        return countOfChannels;
+    }
 
     public void playTV() {
         channel1.playProgram();

@@ -4,8 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f6726a0-34fd-48c7-9fb0-446d69073b23" name="Changes" comment="xml">
+    <list default="true" id="2f6726a0-34fd-48c7-9fb0-446d69073b23" name="Changes" comment="xml + annotations">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/tv.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/maxima/xmlannotaions/TV.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/maxima/xmlannotaions/TV.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/maxima/xmlannotaions/TestTV.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/maxima/xmlannotaions/TestTV.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/applicationContext.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,7 +136,14 @@
       <option name="project" value="LOCAL" />
       <updated>1702575077494</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="xml + annotations">
+      <created>1702577738670</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1702577738670</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -150,7 +162,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="xml" />
-    <option name="LAST_COMMIT_MESSAGE" value="xml" />
+    <MESSAGE value="xml + annotations" />
+    <option name="LAST_COMMIT_MESSAGE" value="xml + annotations" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -164,6 +177,11 @@
           <url>file://$PROJECT_DIR$/src/main/java/ru/maxima/radio/TestRadio.java</url>
           <line>15</line>
           <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ru/maxima/xmlannotaions/TestTV.java</url>
+          <line>12</line>
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

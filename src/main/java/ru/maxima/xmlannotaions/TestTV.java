@@ -7,8 +7,14 @@ public class TestTV {
         ClassPathXmlApplicationContext context =
                 new ClassPathXmlApplicationContext("applicationContext.xml");
 
-        TV tv = context.getBean("TV", TV.class);
+        TV tv1 = context.getBean("TV", TV.class);
+        TV tv2 = context.getBean("TV", TV.class);
 
-        tv.playTV();
+        System.out.println(tv1.equals(tv2));
+
+        System.out.println(tv1.getName());
+        System.out.println(tv1.getCountOfChannels());
+
+        tv1.playTV();
     }
 }
